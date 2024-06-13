@@ -78,6 +78,16 @@ class _MainPageState extends State<MainPage> {
           )
         ],
       ),
+      body: Container(
+        padding: const EdgeInsets.all(10),
+        child: GridView.count(
+          crossAxisCount: 2,
+          children: [
+            Card(),
+            Card(),
+          ],
+        ),
+      ),
     );
   }
 }
