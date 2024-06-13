@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_grocery_ui/data.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,6 +24,8 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  final data = Product('Bayam', '2.000', '1 ikat', 'assets/img1.png',
+      'Secara umum sayura dan buah-buahan merupakan sumber berbagai vitamin, mineral');
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -83,7 +86,13 @@ class _MainPageState extends State<MainPage> {
         child: GridView.count(
           crossAxisCount: 2,
           children: [
-            Card(),
+            Card(
+              elevation: 2,
+              shadowColor: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
+              ),
+            ),
             Card(),
           ],
         ),
